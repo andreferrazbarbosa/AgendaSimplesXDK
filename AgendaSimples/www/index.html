@@ -1,0 +1,119 @@
+<html>
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Agenda Simples</title>
+
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet">
+
+  <script src="js/jquery-1.8.3.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <link href="css/jquery-ui.css">
+  
+  <script>
+  $(function() {
+    $( document ).tooltip();
+  });
+  </script>
+  
+  <style>  
+  @font-face {
+      font-family: EraserRegular;
+      src: url(EraserRegular.ttf);
+    }
+     
+    @font-face {
+      font-family: EraserDust;
+      src: url(EraserDust.ttf);
+    }       
+     
+    body {
+      background: #333333;
+      font-family: EraserDust;
+      font-size: 12pt;
+      color: #ffffff;
+    }             
+  label {
+    display: inline-block;
+    width: 5em;
+  }
+  :required:focus {
+	box-shadow: 0  0 3px rgba(255,0,0,0.5); 
+  }
+  input[type=search] { 	
+	font-family: Georgia;  
+  }
+  </style>
+</head>
+
+<body>
+<div id="inicio"></div>
+   
+   <h3 align="center">Agenda Simples</h3>
+  
+  <h4 align="center"><a href="#cadastrar" onClick="ResetaForm();cadastrar.nome.focus();">Cadastrar</a></h4>    
+
+  <div id="results"></div>
+
+  <div id="cadastrar" data-role="page"></div>  
+  <h4 align="center">Cadastro</h4>            
+
+  <form>
+    <div class="row">
+      <div class="span3">
+          <label for="Nome"><b>Nome</b></label>
+        <input type="text" class="span3" placeholder="Nome" id="nome">
+      </div>
+    </div>
+      
+      <div class="row">
+      <div class="span3">
+          <label for="CPF"><b>CPF</b></label>
+        <input type="text" class="span3" placeholder="CPF" id="cpf">
+      </div>
+    </div>    
+      
+      <div class="row">
+        <div class="span3">
+          <label for="Sexo"><b>Sexo</b></label>
+          <input type="radio" name="sexo" value="M" checked> M
+          <input type="radio" name="sexo" value="F"> F<br>
+        </div>
+      </div>
+
+	<div class="row">
+      <div class="span3">
+          <label for="Fone"><b>Telefone</b></label>
+        <input type="text" class="span3" placeholder="Telefone" id="fone">
+      </div>
+    </div>
+
+    <input type="hidden" id="id"/>
+
+    <div class="form-actions" style="background-color: #333333;">
+      <button type="button" class="btn btn-primary" onClick="IncluiRegistro()">Salvar</button>
+      <button type="button" class="btn" onClick="AtualizaRegistro()">Alterar</button>
+      <button type="button" class="btn btn-danger" title="Restaurar" onClick="Reinicia()">Ini</button>
+    </div>
+  </form>
+    
+  <h5 align="center"><a href="#inicio">Voltar ao Início</a></h5><br />
+    
+  <script src="js/bootstrap.js"></script>
+  <script src="js/utils.js"></script>
+  
+  <br />
+      
+  <p align="center"><i>Criado por: <br /> André Rodrigues
+                                   <br /> Diego Rodrigues
+                                   <br /> Marcelo Dominato
+                                   <br /> Paulo Amorim
+        </i></p>
+    
+
+</body>
+</html>
